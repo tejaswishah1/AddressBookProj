@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AddressBookProject
 {
-    public class AddressBook : Contacts
+    public class AddressBook : IContacts
     {
       public  Dictionary<string, Contacts> addressBook = new Dictionary<string, Contacts>();
 
