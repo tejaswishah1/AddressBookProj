@@ -104,5 +104,18 @@ namespace AddressBookProject
                 }
             }
         }
+        public void DeleteContact(string name)
+        {
+            if (addressBook.ContainsKey(name))
+            {
+                addressBook.Remove(name);
+                Console.WriteLine("Deleted successfully");
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice. Try again");
+            }
+        }
     }
 }

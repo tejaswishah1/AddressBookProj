@@ -42,6 +42,8 @@ namespace AddressBookProject
             addressbook.EditContact(firstName);
             addressbook.ViewData();
 
+            addressbook.DeleteContact(firstName);
+            addressbook.ViewData();
 
 
         }
