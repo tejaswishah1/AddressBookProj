@@ -39,6 +39,9 @@ namespace AddressBookProject
             addressbook.AddContact(firstName,lastName,address,phoneNumber,state,city,email);
             addressbook.ViewData();
 
+            addressbook.EditContact(firstName);
+            addressbook.ViewData();
+
 
 
         }
