@@ -6,7 +6,7 @@ namespace AddressBookProject
 {
     public class AddressBook : IContacts
     {
-      public  Dictionary<string, Contacts> addressBook = new Dictionary<string, Contacts>();
+        public Dictionary<string, Contacts> addressBook = new Dictionary<string, Contacts>();
 
         public void AddContact(string fname, string lname, string address, string phone, string state, string city, string email)
         {
@@ -40,9 +40,9 @@ namespace AddressBookProject
         }
         public void ViewData()
         {
-            foreach(KeyValuePair<string, Contacts> i in addressBook)
-                {
-                Console.WriteLine("First name is " +i.Value.FirstName);
+            foreach (KeyValuePair<string, Contacts> i in addressBook)
+            {
+                Console.WriteLine("First name is " + i.Value.FirstName);
                 Console.WriteLine("Last name is " + i.Value.LastName);
                 Console.WriteLine("Address is " + i.Value.Address);
                 Console.WriteLine("Phone number is " + i.Value.PhoneNuber);
@@ -54,7 +54,7 @@ namespace AddressBookProject
         }
         public void EditContact(string name)
         {
-            foreach(KeyValuePair<string, Contacts> i in addressBook)
+            foreach (KeyValuePair<string, Contacts> i in addressBook)
             {
                 if (i.Key.Equals(name))
                 {
@@ -114,9 +114,9 @@ namespace AddressBookProject
                 else
                 {
                     Console.WriteLine(" Try again");
-                    
 
-                
+
+
                 }
             }
         }
