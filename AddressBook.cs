@@ -7,6 +7,7 @@ namespace AddressBookProject
     public class AddressBook : IContacts
     {
         public Dictionary<string, Contacts> addressBook = new Dictionary<string, Contacts>();
+        public HashSet<Contacts> list = new HashSet<Contacts>();
 
         public void AddContact(string fname, string lname, string address, string phone, string state, string city, string email)
         {
@@ -132,6 +133,11 @@ namespace AddressBookProject
             {
                 Console.WriteLine("Invalid choice. Try again");
             }
+        }
+
+        public HashSet<Contacts> GetAddressBook()
+        {
+            return list;
         }
     }
 }

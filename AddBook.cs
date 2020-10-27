@@ -67,6 +67,44 @@ namespace AddressBookProject
                 }
                 return listOfSearchPersonsByState;
             }
+             Dictionary<string, Contacts> CityDictionary()
+            {
+                Dictionary<string, Contacts> cityDictionary = new Dictionary<string, Contacts>();
+                Dictionary<string, AddressBook>.Enumerator enumerator = collectionAddressBook.GetEnumerator();
+                while (enumerator.MoveNext())
+                {
+                    AddressBook searchAddressBook = enumerator.Current.Value;
+                    HashSet<Contacts> listOfAddressBook = searchAddressBook.GetAddressBook();
+                    HashSet<Contacts>.Enumerator enumerator1 = listOfAddressBook.GetEnumerator();
+                    while (enumerator1.MoveNext())
+                    {
+                        Contacts c = enumerator1.Current;
+                        cityDictionary.Add(enumerator1.Current.City, c);
+
+                    }
+                }
+                return cityDictionary;
+            }
+             Dictionary<string, Contacts> StateDictionary()
+            {
+                Dictionary<string, Contacts> stateDictionary = new Dictionary<string, Contacts>();
+                Dictionary<string, AddressBook>.Enumerator enumerator = collectionAddressBook.GetEnumerator();
+                while (enumerator.MoveNext())
+                {
+                    AddressBook searchAddressBook = enumerator.Current.Value;
+                    HashSet<Contacts> listOfAddressBook = searchAddressBook.GetAddressBook();
+                    HashSet<Contacts>.Enumerator enumerator1 = listOfAddressBook.GetEnumerator();
+                    while (enumerator1.MoveNext())
+                    {
+                        Contacts c = enumerator1.Current;
+                        stateDictionary.Add(enumerator1.Current.State, c);
+
+                    }
+                }
+                return stateDictionary;
+            }
+
+
 
         } } }
 
