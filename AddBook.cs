@@ -38,7 +38,7 @@ namespace AddressBookProject
             while (enumerator.MoveNext())
             {
                 AddressBook searchAddressBook = enumerator.Current.Value;
-                List<Contacts> listOfSearch = searchAddressBook.GetAddressBook();
+                HashSet<Contacts> listOfSearch = searchAddressBook.GetAddressBook();
                 foreach (Contacts i in listOfSearch)
                 {
                     if (i.City == searchKey)
@@ -56,7 +56,7 @@ namespace AddressBookProject
                 while (enumerator.MoveNext())
                 {
                     AddressBook searchAddressBook = enumerator.Current.Value;
-                    List<Contacts> listOfSearch = searchAddressBook.GetAddressBook();
+                    HashSet<Contacts> listOfSearch = searchAddressBook.GetAddressBook();
                     foreach (Contacts i in listOfSearch)
                     {
                         if (i.City == searchKey)

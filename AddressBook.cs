@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AddressBookProject
@@ -138,6 +139,13 @@ namespace AddressBookProject
         public HashSet<Contacts> GetAddressBook()
         {
             return list;
+        }
+        public void DiplayAlphabeticallyByPersonName()
+        {
+            List<Contacts> sortedList = list.OrderBy(x => x.FirstName).ToList();
+            Console.WriteLine("Dispaying the Person name alphabetically");
+            foreach (var name in sortedList)
+                Console.WriteLine(name.FirstName);
         }
     }
 }
